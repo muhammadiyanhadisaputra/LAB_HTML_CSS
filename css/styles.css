@@ -1,0 +1,110 @@
+/* CUSTOMIZING BOOTSTRAP - Overriding dengan CSS kustom.
+   File ini harus dimuat SETELAH bootstrap.min.css agar menimpa gaya default. */
+
+:root {
+    --bs-primary: #2980b9;
+    --bs-primary-rgb: 41, 128, 185;
+    --grad-soft: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    --grad-pink: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    --grad-purple: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --ink: #2c3e50;
+}
+
+/* Latar ungu bergradasi */
+body {
+    background: var(--grad-purple) fixed;
+    min-height: 100vh;
+    padding: 2rem 0;
+    color: var(--ink);
+}
+
+/* Kartu putih utama di tengah */
+.page-card {
+    background: #fff;
+    border-radius: 1.25rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .3);
+    padding: 2rem;
+}
+
+.page-title { color: var(--ink); font-weight: 700; text-align: center; }
+.page-subtitle { color: #7f8c8d; text-align: center; margin-bottom: 2rem; }
+
+/* Tiap bagian materi */
+.section-box {
+    background: #fff;
+    border-radius: .75rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.section-box h2 {
+    color: var(--bs-primary);
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid #3498db;
+    margin-bottom: 1rem;
+}
+.section-box h3 { font-size: 1.05rem; font-weight: 700; color: var(--ink); margin-top: 1.25rem; }
+
+/* Kotak gradasi (Key Points, Breakdown, Attributes, Next Steps, Tools) */
+.info-box {
+    background: var(--grad-soft);
+    border-radius: .75rem;
+    padding: 1rem 1.25rem;
+    margin-top: 1rem;
+}
+.info-box h4 { font-size: 1rem; font-weight: 700; margin-bottom: .5rem; }
+.info-box ul { margin-bottom: 0; }
+
+/* Kotak pink (Practice Exercises) */
+.practice-box { background: var(--grad-pink); }
+
+/* Blok kode gelap dengan label merah */
+.code-block {
+    position: relative;
+    background: #2d3748;
+    color: #e2e8f0;
+    border-radius: .5rem;
+    padding: 1.25rem 1rem 1rem;
+    overflow-x: auto;
+    margin-bottom: 0;
+}
+.code-block code { color: inherit; font-size: .85rem; }
+.code-block::before {
+    content: attr(data-lang);
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    background: #e74c3c;
+    color: #fff;
+    font-size: .65rem;
+    font-weight: 700;
+    padding: .1rem .5rem;
+    border-radius: .25rem;
+}
+
+/* Tabel dengan header biru */
+.table-blue thead th { background: #3498db; color: #fff; border-color: #3498db; }
+
+/* Kotak Live Examples */
+.demo-box {
+    background: #f0fffe;
+    border: 2px solid #a8edea;
+    border-radius: .75rem;
+    padding: 1.25rem;
+}
+.demo-box h1 { text-align: center; font-weight: 700; color: var(--ink); }
+.demo-box h2 { font-size: 1.5rem; color: var(--ink); border-bottom: 2px solid var(--ink); padding-bottom: .3rem; }
+.demo-box h3 { color: var(--bs-primary); }
+.demo-box h4 { font-size: 1rem; font-weight: 700; margin-top: 1rem; }
+
+/* Kartu penutup */
+.congrats {
+    background: var(--grad-purple);
+    color: #fff;
+    border-radius: .75rem;
+    text-align: center;
+    padding: 1.5rem;
+}
+.congrats h2 { color: #fff; border: 0; margin-bottom: .5rem; padding: 0; }
